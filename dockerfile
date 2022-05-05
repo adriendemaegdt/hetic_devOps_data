@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y \
     python3-pip
 
 # RUN pip3 install -r requirements.txt
-RUN python generate.py
+RUN python3 generate.py
 
 RUN ls
 # RUN pip install --no-cache-dir -r requirements.txt
