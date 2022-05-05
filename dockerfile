@@ -13,7 +13,7 @@ COPY output.data.json /data/
 RUN add-apt-repository universe
 
 RUN apt-get update && apt-get install -y \
-    python3.8 \
+    python \
     python3-pip
 
 RUN pip3 install -r requirements.txt
