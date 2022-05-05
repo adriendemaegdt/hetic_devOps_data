@@ -10,10 +10,12 @@ FROM ubuntu
 COPY input.data.json /data/
 COPY output.data.json /data/
 
+RUN sudo add-apt-repository universe
+RUN sudo apt update
 RUN apt-get update && apt-get install -y \
     python3.8 \
     python3-pip
-    
+
 RUN pip3 install -r requirements.txt
 RUN python generate.py
 
