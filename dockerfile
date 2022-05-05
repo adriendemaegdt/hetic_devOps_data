@@ -9,6 +9,8 @@ FROM ubuntu
 # COPY --chown=appuser:appuser target/**.jar /home/appuser/app.jar
 COPY input.data.json /data/
 COPY output.data.json /data/
+COPY requirements.txt requirements.txt
+COPY generate.py generate.py
 
 RUN apt-get update && apt-get install -y \
     python3 \
