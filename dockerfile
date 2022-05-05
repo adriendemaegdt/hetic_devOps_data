@@ -11,7 +11,7 @@ COPY input.data.json /data/
 COPY output.data.json /data/
 
 RUN apt-get update && apt-get install -y \
-    python \
+    python3 \
     python3-pip
 
 RUN pip3 install -r requirements.txt
