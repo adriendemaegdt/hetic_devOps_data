@@ -44,7 +44,7 @@ jobs:
 
 
           # relative path to the place where source code with Dockerfile is located
-          context: ..
+          context: .
           # Note: tags has to be all lower-case
           tags: adriendemaegdt/hetic_devops_data:${{ steps.vars.outputs.sha_short }}
           # build on feature branches, push only on main branch
