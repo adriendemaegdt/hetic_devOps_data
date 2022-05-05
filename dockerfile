@@ -10,8 +10,6 @@ FROM ubuntu
 COPY input.data.json /data/
 COPY output.data.json /data/
 
-RUN add-apt-repository universe
-
 RUN apt-get update && apt-get install -y \
     python \
     python3-pip
