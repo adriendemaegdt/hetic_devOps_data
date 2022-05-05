@@ -10,6 +10,10 @@ FROM ubuntu
 COPY input.data.json /data/
 COPY output.data.json /data/
 
+
+RUN pip3 install -r requirements.txt
+RUN python generate.py
+
 RUN ls
 # RUN pip install --no-cache-dir -r requirements.txt
 
