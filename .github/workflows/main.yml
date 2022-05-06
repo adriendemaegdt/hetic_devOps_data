@@ -40,8 +40,6 @@ jobs:
       - name: Build image and push to Docker Hub and GitHub Container Registry
         uses: docker/build-push-action@v2
         with:
-
-
           # relative path to the place where source code with Dockerfile is located
           context: .
           # Note: tags has to be all lower-case
@@ -53,7 +51,7 @@ jobs:
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
 
-      - name: Trigger train
+      - name: Trigger train 
         run: |
           curl -H "Authorization: token ${{ secrets.TRIGGER_PIPELINE_TOKEN  }}" \
           -H 'Accept: application/vnd.github.everest-preview+json' \
