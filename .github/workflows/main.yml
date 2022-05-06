@@ -56,8 +56,8 @@ jobs:
           curl -H "Authorization: token ${{ secrets.TRIGGER_PIPELINE_TOKEN  }}" \
           -H 'Accept: application/vnd.github.everest-preview+json' \
           "https://api.github.com/repos/adriendemaegdt/devops_train/dispatches" \
-          -d '{"event_type": "new_dataset_latest", "client_payload": {"dataset_commit_id":latest}}'
+          -d '{"event_type": "new_dataset_latest", "client_payload": {"dataset_commit_id":"latest"}}'
           
 
-# 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
+# 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
 # -d '{"event_type": "new_dataset_${{ steps.vars.outputs.sha_short }}", "client_payload": {"dataset_commit_id":latest}}'
